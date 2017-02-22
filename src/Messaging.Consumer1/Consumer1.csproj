@@ -13,6 +13,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Messaging.Core\Messaging.Core.csproj" />
+    <ProjectReference Include="..\Messaging.Infrastructure\Messaging.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
