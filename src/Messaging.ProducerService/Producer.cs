@@ -29,7 +29,7 @@ namespace Service1
             Console.WriteLine($"Region: {options.Region}");
             Console.WriteLine("Queues:");
             //ListQueues();
-            _notifier.ListTopics();
+            //_notifier.ListTopics();
             SendNotifications();
             //SendMessages();
         }

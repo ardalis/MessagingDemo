@@ -1,4 +1,5 @@
 ﻿using Message.Infrastructure.Services;
+using Messaging.Infrastructure.Services;
 using Microsoft.Extensions.Configuration;
 using System;
 
@@ -14,7 +15,12 @@ namespace Consumer1
                 .AddEnvironmentVariables();
 
             var config = builder.Build();
-            var app = new Consumer(config, new AmazonQueueAccessor(config));
+
+            // Amazon
+            //var app = new Consumer(config, new AmazonQueueAccessor(config));
+
+            // Amazon
+            var app = new Consumer(config, new AzureQueueAccessor());
 
             app.Execute();
         }

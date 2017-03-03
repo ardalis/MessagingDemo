@@ -2,7 +2,6 @@
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Linq;
-using System.Text;
 using System.Threading;
 
 namespace Consumer1
@@ -39,23 +38,6 @@ namespace Consumer1
             while (true)
             {
                 _queueAccessor.HandleAndDeleteMessage(msg => Console.WriteLine($"Handling message: {msg}!"));
-                //var response = client.ReceiveMessageAsync(_queueUrl).Result;
-                //if (response.Messages.Count > 0)
-                //{
-                //    Console.WriteLine($"Detected {response.Messages.Count} message to process.");
-                //    foreach (var msg in response.Messages)
-                //    {
-                //        Console.WriteLine($"Handling message: {msg.Body}!");
-
-                //        // Delete our message so that it doesn't get handled again
-                //        var receiptHandle = msg.ReceiptHandle;
-                //        client.DeleteMessageAsync(_queueUrl, receiptHandle).Wait();
-                //    }
-                //}
-                //else
-                //{
-                //    Console.WriteLine("No messages.");
-                //}
                 Thread.Sleep(100);
             }
         }

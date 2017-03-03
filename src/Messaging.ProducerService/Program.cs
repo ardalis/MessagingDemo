@@ -13,7 +13,12 @@ namespace Service1
                 .AddEnvironmentVariables();
 
             var config = builder.Build();
-            var app = new Producer(config, new AmazonNotificationService(config));
+
+            // Use Amazon
+            //var app = new Producer(config, new AmazonNotificationService(config));
+
+            // Use Azure
+            var app = new Producer(config, new AzureNotificationService());
 
             app.Execute();
         }

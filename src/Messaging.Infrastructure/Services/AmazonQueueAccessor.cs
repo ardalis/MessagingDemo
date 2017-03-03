@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using Amazon.SQS;
 using Amazon.SQS.Model;
 
-namespace Message.Infrastructure.Services
+namespace Messaging.Infrastructure.Services
 {
     public class AmazonQueueAccessor : IQueueAccessor
     {

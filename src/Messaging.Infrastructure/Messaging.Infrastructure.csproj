@@ -4,6 +4,10 @@
     <TargetFramework>netcoreapp1.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;NETCOREAPP1_0</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.3.0.3" />
     <PackageReference Include="AWSSDK.SimpleNotificationService" Version="3.3.0.7" />
@@ -13,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Messaging.Core\Messaging.Core.csproj" />
+    <ProjectReference Include="..\Microsoft.Azure.ServiceBus\Microsoft.Azure.ServiceBus.csproj" />
   </ItemGroup>
 
 </Project>

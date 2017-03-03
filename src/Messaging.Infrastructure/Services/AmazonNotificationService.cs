@@ -6,7 +6,7 @@ using Messaging.Core.Interfaces;
 using Microsoft.Extensions.Configuration;
 using System.Linq;
 
-namespace Message.Infrastructure.Services
+namespace Messaging.Infrastructure.Services
 {
     public class AmazonNotificationService : ISendNotifications
     {
